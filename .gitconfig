@@ -1,0 +1,25 @@
+[branch]
+	autosetuprebase = always
+[user]
+	name = deathowl
+	email = csergo.balint@ustream.tv
+[push]
+	default = upstream
+[core]
+	autocrlf = input
+	safecrlf = true
+[alias]
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	lsd = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	le = log --oneline --decorate
+	dlc = diff --cached HEAD^
+	done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+	st = status -s
+	cl = clone
+	ci = commit
+	co = checkout
+	br = branch 
+	diff = diff --word-diff
+	dc = diff --cached
