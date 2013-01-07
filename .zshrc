@@ -34,7 +34,7 @@ plugins=(git osx terminalapp macports git-extra)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
 export USTREAM_DEVELOPER_MODE=TRUE
 
 ### Added by the Heroku Toolbelt
