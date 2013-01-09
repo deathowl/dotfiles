@@ -21,3 +21,5 @@ export USTREAM_DEVELOPER_MODE=TRUE
 export PATH="/usr/local/heroku/bin:$PATH"
 ###unset auto complete
 unsetopt correct_all
+export EDITOR='sublime -w'
+
