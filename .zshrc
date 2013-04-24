@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="clean"
+ZSH_THEME="owl"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -23,3 +23,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 unsetopt correct_all
 export EDITOR='vim'
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
