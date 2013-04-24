@@ -1,6 +1,3 @@
-if [[ -z $ZSH_THEME_CLOUD_PREFIX ]]; then
-    ZSH_THEME_CLOUD_PREFIX='☁'
-fi
 
 PROMPT='%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}:%{$fg[blue]%}%B%c/%b%{$reset_color%}$(git_prompt_info) %(!.#.$)'
 RPROMPT='[%*]'
