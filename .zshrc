@@ -9,7 +9,7 @@ ZSH_THEME="owl"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx terminalapp macports git-extra)
+plugins=(git osx knife vagrant ant macports git-extra rails ruby composer django  python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -22,6 +22,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ###unset auto complete
 unsetopt correct_all
 export EDITOR='vim'
-
+export XDEBUG_CONFIG="idekey=phpStorm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

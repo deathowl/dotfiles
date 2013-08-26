@@ -9,3 +9,6 @@ function wbdelete() {
 		git branch -D $var
 	done
 }
+alias vgu="vagrant up"
+alias vgh="vagrant halt"
+alias vgr="vagrant reload"
