@@ -9,6 +9,11 @@ function wbdelete() {
 		git branch -D $var
 	done
 }
+
+function gitstat() {
+	git log --author=$@ --pretty=tformat: --numstat \
+		| gawk '{ add += $1 ; subs += $2 ; loc += $1 - $2 } END { printf "added lines: %s removed lines : %s total lines: %s\n",add,subs,loc }' -
+}
 alias vgu="vagrant up"
 alias vgh="vagrant halt"
 alias vgr="vagrant reload"
