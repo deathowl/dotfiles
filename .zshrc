@@ -25,3 +25,4 @@ export EDITOR='vim'
 export XDEBUG_CONFIG="idekey=phpStorm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/opt/local/share/java/android-sdk-macosx/tools #add Android SDK to path for scripting
