@@ -1,6 +1,7 @@
 #To store not ustream specific aliases 
 alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 alias antal="ant test-all"
+alias light="/Applications/LightTable/light > /dev/null"
 function wbdelete() {
  	for var in "$@"
 	do
