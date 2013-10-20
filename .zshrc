@@ -23,6 +23,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 unsetopt correct_all
 export EDITOR='vim'
 export XDEBUG_CONFIG="idekey=phpStorm"
+export ANDROID_HOME='/opt/local/share/java/android-sdk-macosx/'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/opt/local/share/java/android-sdk-macosx/tools #add Android SDK to path for scripting
