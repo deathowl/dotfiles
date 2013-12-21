@@ -18,7 +18,7 @@ PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export USTREAM_DEVELOPER_MODE=TRUE
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+PATH="/usr/local/heroku/bin:$PATH"
 ###unset auto complete
 unsetopt correct_all
 export EDITOR='vim'
@@ -28,3 +28,4 @@ export ANDROID_HOME='/opt/local/share/java/android-sdk-macosx/'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/opt/local/share/java/android-sdk-macosx/tools #add Android SDK to path for scripting
 PATH=$PATH:/opt/local/share/java/android-sdk-macosx/platform-tools #add Android platform tools to path for scripting
+export PATH=/usr/local/tranquil/bin:$PATH
