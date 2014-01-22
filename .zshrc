@@ -14,7 +14,7 @@ plugins=(git osx knife vagrant ant macports git-extra rails ruby composer django
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
+PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
 export USTREAM_DEVELOPER_MODE=TRUE
 
 ### Added by the Heroku Toolbelt
