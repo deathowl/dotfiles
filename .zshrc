@@ -15,7 +15,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
-export USTREAM_DEVELOPER_MODE=TRUE
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
