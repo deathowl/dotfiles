@@ -9,7 +9,7 @@
 	autocrlf = input
 	safecrlf = true
 [alias]
-	workbranch = "!f() { wb=\"work/$1\"; git fetch; git checkout -b $wb origin/master; git commit -m \"$wb initial\" --allow-empty; git push origin $wb --set-upstream; }; f"
+	workbranch = "!f() { wb=\"work/$1\"; git fetch; git checkout -b $wb origin/master; git commit -m \"$wb initial\" --allow-empty; git push origin $wb:$wb --set-upstream; }; f"
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	lsd = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
