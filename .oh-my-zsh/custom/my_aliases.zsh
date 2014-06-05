@@ -18,3 +18,4 @@ function gitstat() {
 alias vgu="vagrant up"
 alias vgh="vagrant halt"
 alias vgr="vagrant reload"
+alias vsh="vagrant ssh"
