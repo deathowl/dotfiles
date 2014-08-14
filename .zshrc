@@ -48,4 +48,6 @@ zle -N zle-line-init
 bindkey '^T' autosuggest-toggle
 
 
-AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=153'
+export AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=153'
+
+export GOPATH=/Users/deathowl/go
