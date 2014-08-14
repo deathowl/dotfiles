@@ -33,3 +33,17 @@ export PATH=/usr/local/tranquil/bin:$PATH
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+source ~/.zsh-autosuggestions/autosuggestions.zsh
+source ~/.zsh-history/zsh-history-substring-search.zsh
+# Enable autosuggestions automatically
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+bindkey '^T' autosuggest-toggle
+
+
+AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=153'
