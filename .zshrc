@@ -38,6 +38,8 @@ source ~/.zsh-history/zsh-history-substring-search.zsh
 # Enable autosuggestions automatically
 zle-line-init() {
     zle autosuggest-start
+
+    bindkey '^f' vi-forward-word
 }
 zle -N zle-line-init
 
