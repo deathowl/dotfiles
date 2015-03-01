@@ -9,12 +9,12 @@ ZSH_THEME="mortalscumbag"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git virtualenv virtualenvwrapper zsh-syntax-highlighting safe-paste osx knife vagrant ant sublime systemadmin git-extra rails ruby composer django  python)
+plugins=(git virtualenv virtualenvwrapper zsh-syntax-highlighting safe-paste knife vagrant ant sublime systemadmin git-extra rails ruby composer django  python)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
+PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
@@ -34,7 +34,6 @@ export PATH=/usr/local/tranquil/bin:$PATH
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export GOPATH=/Users/deathowl/go
 
 export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST=tcp://192.168.59.103:2376
