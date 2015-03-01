@@ -1,0 +1,13 @@
+startup_message       off
+vbell                 on
+termcapinfo xterm* OL=10000
+termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+defscrollback         4000
+silencewait           15
+shell                 zsh
+caption always "%0L=%{bk}%>%-w%{= BW}%n %t%{-}%+W%L>%?(%u)%? %{bk}|%>%=%{Bk}%H %=%{yk} Load: %l %=%{Yk}%C%A %Y.%m.%d %{bk}%100="
+sorendition 10 99 # default!
+activity              "activity in %n (%t) [%w:%s]~"
+bell                  "bell     in %n (%t) [%w:%s]~"
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+
