@@ -2,7 +2,7 @@
 	autosetuprebase = always
 [user]
 	name = deathowl
-	email = csergo.balint@ustream.tv
+	email = bagoly@endticket.com
 [push]
 	default = upstream
 [core]
