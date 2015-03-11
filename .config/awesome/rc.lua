@@ -514,6 +514,10 @@ globalkeys = awful.util.table.join(globalkeys, awful.key({ }, "XF86AudioLowerVol
     vicious.force({ alsawidget.bar })
     alsawidget.notify()
 end))
+globalkeys = awful.util.table.join(globalkeys, awful.key({ }, "XF86MonBrightnessDown", function ()
+        awful.util.spawn("xbacklight -dec 15") end))
+globalkeys = awful.util.table.join(globalkeys, awful.key({ }, "XF86MonBrightnessUp", function ()
+        awful.util.spawn("xbacklight -inc 15") end))
 globalkeys = awful.util.table.join(globalkeys, awful.key({ }, "XF86AudioMute", function()
     awful.util.spawn("amixer sset " .. alsawidget.channel .. " toggle")
     -- The 2 following lines were needed at least on my configuration, otherwise it would get stuck muted
