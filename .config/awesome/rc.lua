@@ -117,7 +117,6 @@ myawesomemenu = {
    { "restart", awesome.restart },
    { "Nitrogen","nitrogen "},
    { "GTK-Theme","gtk-chtheme"},
-   { "Screen Fix/SC2","optirun terminator" },
    { "quit", awesome.quit }
 }
 music = {
@@ -220,6 +219,25 @@ local alsawidget =
     bar_size = 20 -- adjust to fit your font if the bar doesn't fit
   }
 }
+
+-- Initialize widget
+cpuwidget = awful.widget.graph()
+-- Graph properties
+cpuwidget:set_width(50)
+cpuwidget:set_background_color("#494B4F")
+cpuwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 10,0 }, stops = { {0, "#FF5656"}, {0.5, "#88A175"}, 
+                    {1, "#AECF96" }}})
+-- Register widget
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1")
+
+
+--cputxtWidget
+-- Initialize widget
+cputxtwidget = wibox.widget.textbox()
+-- Register widget
+vicious.register(cputxtwidget, vicious.widgets.cpu, "CPU Usage: $1%")
+
+
 -- widget
 alsawidget.bar = awful.widget.progressbar ()
 alsawidget.bar:set_width (8)
@@ -395,8 +413,9 @@ for s = 1, screen.count() do
     local left_layout = wibox.layout.fixed.horizontal()
     left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
+    left_layout:add(cputxtwidget)
+    left_layout:add(cpuwidget)
     left_layout:add(mypromptbox[s])
-
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
