@@ -238,6 +238,19 @@ cputxtwidget = wibox.widget.textbox()
 vicious.register(cputxtwidget, vicious.widgets.cpu, "CPU Usage: $1%")
 
 
+-- Initialize widget
+memwidget = awful.widget.graph()
+-- Progressbar properties
+memwidget:set_width(8)
+memwidget:set_height(10)
+memwidget:set_background_color("#494B4F")
+memwidget:set_border_color(nil)
+memwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 10,0 }, stops = { {0, "#AECF96"}, {0.5, "#88A175"}, 
+                    {1, "#FF5656"}}})
+-- Register widget
+vicious.register(memwidget, vicious.widgets.mem, "$1", 13)
+
+
 -- widget
 alsawidget.bar = awful.widget.progressbar ()
 alsawidget.bar:set_width (8)
@@ -415,6 +428,8 @@ for s = 1, screen.count() do
     left_layout:add(mytaglist[s])
     left_layout:add(cputxtwidget)
     left_layout:add(cpuwidget)
+    left_layout:add(memwidget)
+
     left_layout:add(mypromptbox[s])
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
