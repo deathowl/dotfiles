@@ -11,6 +11,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious = require("vicious")
+local revelation = require("revelation")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -462,6 +463,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
 
+    awful.key({modkey}, "e", revelation),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
