@@ -56,15 +56,15 @@ autorunApps =
    "killall -9 nm-applet",
    "killall -9 obmixer",
     --end
-   "setxkbmap hu", -- Zap X
+   "setxkbmap hu",
 --autorun apps
    "xcompmgr -r 12.00 -o 0.75 -l -15.0 -t -15.0 -I 0.028 -O 0.03 -D 10.$",
-   "conky -c /home/deathowl/.conkyrc",
    "nm-applet",
    "xmobar -b",
    "nitrogen --restore",
    "cbatticon",
-   "obmixer"
+   "ssh-add /home/deathowl/.ssh/id_rsa",
+   "ssh-agent"
 }
 local autorun = true
 if autorun then
