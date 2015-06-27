@@ -6,9 +6,8 @@ xftalpha 0.9
 update_interval 3.0
 total_run_times 0
 own_window yes
-own_window_type normal
-own_window_transparent yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_type desktop
+own_window_hints undecorated,below,skip_taskbar,skip_pager
 double_buffer yes
 minimum_size 220 5
 maximum_width 220
@@ -18,18 +17,17 @@ draw_borders no
 draw_graph_borders yes
 default_color white
 default_shade_color black
-default_outline_color green
+default_outline_color black
 alignment top_right
 gap_x 12
 gap_y 35
 no_buffers yes
-uppercase no
 cpu_avg_samples 2
 override_utf8_locale no
 uppercase yes # set to yes if you want all text to be in uppercase
-own_window yes
-own_window_type normal
-own_window_hints below,skip_taskbar,skip_pagerre
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 110
 
 TEXT
 ${color white}SYSTEM ${hr 1}${color}

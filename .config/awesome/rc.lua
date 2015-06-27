@@ -58,7 +58,8 @@ autorunApps =
     --end
    "setxkbmap hu",
 --autorun apps
-   "xcompmgr -r 12.00 -o 0.75 -l -15.0 -t -15.0 -I 0.028 -O 0.03 -D 10.$",
+   "conky -c /home/deathowl/.conkyrc",
+   "xcompmgr -r 12.00 -o 0.75 -l -15.0 -t -15.0 -I 0.028 -O 0.03 -D 10.$&",
    "nm-applet",
    "xmobar -b",
    "nitrogen --restore",
@@ -463,7 +464,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
 
-    awful.key({modkey}, "e", revelation),
+    awful.key({modkey, "Shift"}, "l",  function() awful.util.spawn("i3lock-fancy", false) end),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -607,7 +608,9 @@ for i = 1, 9 do
                               awful.client.toggletag(tag)
                           end
                       end
-                  end))
+                  end)),
+        awful.key({}, "F10", function() raise_conky() end, function() lower_conky() end),
+        awful.key({}, "Pause", function() toggle_conky() end)
 end
 
 clientbuttons = awful.util.table.join(
@@ -639,6 +642,14 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Conky" },
+  properties = {
+      floating = true,
+      sticky = true,
+      ontop = false,
+      focusable = false,
+      size_hints = {"program_position", "program_size"}
+  } }
 }
 -- }}}
 
@@ -714,3 +725,44 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+function get_conky()
+    local clients = client.get()
+    local conky = nil
+    local i = 1
+    while clients[i]
+    do
+        if clients[i].class == "Conky"
+        then
+            conky = clients[i]
+        end
+        i = i + 1
+    end
+    return conky
+end
+function raise_conky()
+    local conky = get_conky()
+    if conky
+    then
+        conky.ontop = true
+    end
+end
+function lower_conky()
+    local conky = get_conky()
+    if conky
+    then
+        conky.ontop = false
+    end
+end
+function toggle_conky()
+    local conky = get_conky()
+    if conky
+    then
+        if conky.ontop
+        then
+            conky.ontop = false
+        else
+            conky.ontop = true
+        end
+    end
+end
+
