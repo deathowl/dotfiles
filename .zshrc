@@ -28,6 +28,7 @@ RPROMPT='%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}%'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/opt/local/share/java/android-sdk-macosx/tools #add Android SDK to path for scripting
 PATH=$PATH:/opt/local/share/java/android-sdk-macosx/platform-tools #add Android platform tools to path for scripting
+PATH=$PATH:/home/deathowl/.gem/ruby/2.2.0/bin
 export PATH=/usr/local/tranquil/bin:$PATH
 
 #set LANG for Ruby.
