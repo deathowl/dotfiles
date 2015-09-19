@@ -147,7 +147,7 @@ myevilmenu = {
    { "Music",music,beautiful.awesome_icon},
    { "Browsers",browser,beautiful.awesome_icon},
    { "Development",development,beautiful.awesome_icon},
-   { "Termial", "Terminator" },
+   { "Terminal", "Terminator" },
    { "Files", "thunar" },
    { "MC","terminator -e mc"},
    {"XPDF","xpdf"}
