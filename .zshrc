@@ -24,12 +24,11 @@ export EDITOR='vim'
 export XDEBUG_CONFIG="idekey=phpStorm"
 export ANDROID_HOME='/opt/local/share/java/android-sdk-macosx/'
 RPROMPT='%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}%'
-
+export GOPATH=/home/deathowl/gohome
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:/opt/local/share/java/android-sdk-macosx/tools #add Android SDK to path for scripting
-PATH=$PATH:/opt/local/share/java/android-sdk-macosx/platform-tools #add Android platform tools to path for scripting
 PATH=$PATH:/home/deathowl/.gem/ruby/2.2.0/bin
-export PATH=/usr/local/tranquil/bin:$PATH
+PATH=$PATH:/home/deathowl/gohome/bin
+export PATH
 
 #set LANG for Ruby.
 export LANGUAGE=en_US.UTF-8
