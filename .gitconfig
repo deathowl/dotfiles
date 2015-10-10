@@ -6,7 +6,7 @@
 [push]
 	default = upstream
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 [alias]
 	workbranch = "!f() { wb=\"work/$1\"; git fetch; git checkout -b $wb origin/master; git commit -m \"$wb initial\" --allow-empty; git push origin $wb:$wb --set-upstream; }; f"
