@@ -29,3 +29,7 @@ alias pir="pip install -r requirements.txt"
 alias idk='echo ".idea" >> .gitignore ; git add .gitignore ; git commit -m "i have no idea"'
 alias askype="apulse32 skype"
 alias ccat="pygmentize -g"
+
+function cless() {
+	ccat $1 2>/dev/null | less	
+}
