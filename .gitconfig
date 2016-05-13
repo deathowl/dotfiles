@@ -2,7 +2,7 @@
 	autosetuprebase = always
 [user]
 	name = deathowl
-	email = bagoly@endticket.com
+	email = bcsergo@hortonworks.com
 [push]
 	default = upstream
 [core]
