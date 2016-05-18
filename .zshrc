@@ -34,4 +34,7 @@ export PATH
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
+#boot2docker junk...
+export DOCKER_HOST=tcp://192.168.59.104:2376
+export DOCKER_CERT_PATH=/Users/bcsergo/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
