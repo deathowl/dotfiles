@@ -14,7 +14,7 @@ plugins=(git brew catimg virtualenv virtualenvwrapper boot2docker zsh-syntax-hig
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
+PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin:/opt/cbd
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
@@ -35,6 +35,4 @@ export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 #boot2docker junk...
-export DOCKER_HOST=tcp://192.168.59.104:2376
-export DOCKER_CERT_PATH=/Users/bcsergo/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+eval "$(boot2docker shellinit)" 2> /dev/null
