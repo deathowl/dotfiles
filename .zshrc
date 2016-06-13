@@ -24,10 +24,10 @@ export EDITOR='vim'
 export XDEBUG_CONFIG="idekey=phpStorm"
 export ANDROID_HOME='/opt/local/share/java/android-sdk-macosx/'
 RPROMPT='%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}%'
-export GOPATH=/home/deathowl/gohome
+export GOPATH=$HOME/gohome
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:/home/deathowl/.gem/ruby/2.2.0/bin
-PATH=$PATH:/home/deathowl/gohome/bin
+PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
+PATH=$PATH:$HOME/gohome/bin
 export PATH
 
 #set LANG for Ruby.
@@ -36,3 +36,4 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 #boot2docker junk...
 eval "$(boot2docker shellinit)" 2> /dev/null
+
