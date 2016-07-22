@@ -13,6 +13,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
+set backspace=indent,eol,start
 
 syntax on
 filetype plugin indent on
