@@ -22,7 +22,7 @@ PATH="/usr/local/heroku/bin:$PATH"
 unsetopt correct_all
 export EDITOR='vim'
 export XDEBUG_CONFIG="idekey=phpStorm"
-export ANDROID_HOME='/opt/local/share/java/android-sdk-macosx/'
+export ANDROID_HOME='~/Library/Android/sdk/tools'
 RPROMPT='%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}%'
 export GOPATH=$HOME/gohome
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
