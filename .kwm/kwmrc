@@ -168,4 +168,4 @@ kwmc bindsym prefix+shift-p space -p decrease all
 /* App level overrides */
 kwmc rule owner="Steam" properties={float="true"}
 kwmc rule owner="Deezer" properties={float="true"}
-
+kwmc rule owner="HipChat" properties={float="true"}
