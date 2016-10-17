@@ -1,0 +1,1 @@
+/usr/local/bin/awk -v s="$1" 'BEGIN{split(s, a, ","); for (i in a) b[a[i]]} NR in b' "$2"
