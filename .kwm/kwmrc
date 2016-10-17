@@ -165,3 +165,7 @@ kwmc bindsym prefix+shift-right space -p decrease right
 kwmc bindsym prefix+shift-up space -p decrease top
 kwmc bindsym prefix+shift-down space -p decrease bottom
 kwmc bindsym prefix+shift-p space -p decrease all
+/* App level overrides */
+kwmc rule owner="Steam" properties={float="true"}
+kwmc rule owner="Deezer" properties={float="true"}
+
