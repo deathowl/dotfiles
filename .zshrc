@@ -5,14 +5,14 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mortalscumbag"
+ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew catimg virtualenv virtualenvwrapper boot2docker zsh-syntax-highlighting safe-paste knife vagrant ant sublime systemadmin git-extra rails ruby composer django  python)
+plugins=(git brew screen catimg virtualenv virtualenvwrapper zsh-syntax-highlighting safe-paste sublime systemadmin git-extra rails ruby composer django  pythoni sudo docker)
 
 source $ZSH/oh-my-zsh.sh
-
+source bin/z.sh
 # Customize to your needs...
 PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin:/opt/cbd
 
@@ -23,7 +23,6 @@ unsetopt correct_all
 export EDITOR='vim'
 export XDEBUG_CONFIG="idekey=phpStorm"
 export ANDROID_HOME='~/Library/Android/sdk/tools'
-RPROMPT='%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}%'
 export GOPATH=$HOME/gohome
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
