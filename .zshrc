@@ -5,6 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+export TERM="xterm-256color"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -14,7 +15,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context docker_machine  dir vcs virtualenv)
 POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_HIDE_BRANCH_ICON=true
 source $ZSH/oh-my-zsh.sh
-source bin/z.sh
+source /Users/bcsergo/bin/z.sh
 # Customize to your needs...
 PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin:/opt/cbd
 
