@@ -40,6 +40,7 @@ alias idk='echo ".idea" >> .gitignore ; git add .gitignore ; git commit -m "i ha
 alias askype="apulse32 skype"
 alias ccat="pygmentize -g"
 alias mou="open /Applications/Mou.app"
+alias dps="docker ps"
 alias dmerge="open /Applications/DiffMerge.app"
 function cless() {
 	ccat $1 2>/dev/null | less	
