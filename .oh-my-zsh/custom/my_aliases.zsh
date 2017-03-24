@@ -41,6 +41,7 @@ alias askype="apulse32 skype"
 alias ccat="pygmentize -g"
 alias mou="open /Applications/Mou.app"
 alias dps="docker ps"
+alias hist="cat /Users/bcsergo/.zsh_history | peco"
 alias dmerge="open /Applications/DiffMerge.app"
 function cless() {
 	ccat $1 2>/dev/null | less	
