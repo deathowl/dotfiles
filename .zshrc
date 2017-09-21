@@ -7,7 +7,7 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 export TERM="xterm-256color"
-ZSH_THEME="ys"
+ZSH_THEME="awesomepanda"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
