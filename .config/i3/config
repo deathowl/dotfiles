@@ -47,7 +47,6 @@ bindsym $mod+l exec i3lock
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
 bindsym $mod+eacute focus right
 
 # alternatively, you can use the cursor keys:
@@ -155,5 +154,19 @@ bindsym $mod+x mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+  status_command i3status
+  colors {
+    separator #586e75
+    background #002b36
+    statusline #aea79f
+    focused_workspace #586e75 #586e75 #ffffff
+    active_workspace #073642 #073642 #ffffff
+    inactive_workspace #002b36 #002b36 #aea79f
+    urgent_workspace #77216f #77216f #ffffff
+  }
 }
+
+client.focused #586e75 #586e75 #fdf6e3 #268bd2
+client.focused_inactive #073642 #073642 #93a1a1 #002b36
+client.unfocused #002b36 #002b36 #586e75 #002b36
+client.urgent #dc322f #dc322f #fdf6e3 #dc322f
