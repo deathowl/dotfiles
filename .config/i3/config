@@ -45,7 +45,7 @@ bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+x exec "i3lock -c 000000"
+bindsym $mod+x exec "betterlockscreen -l"
 
 
 bindsym $mod+Shift+1 move container to workspace $ws1
