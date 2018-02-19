@@ -11,7 +11,7 @@ ZSH_THEME="awesomepanda"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew screen catimg virtualenv virtualenvwrapper zsh-syntax-highlighting safe-paste sublime systemadmin git-extra rails ruby composer django  pythoni sudo docker)
+plugins=(git brew screen catimg  zsh-syntax-highlighting safe-paste sublime systemadmin git-extra rails ruby composer django sudo docker virtualenvwrapper)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context docker_machine  dir vcs virtualenv)
 POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_HIDE_BRANCH_ICON=true

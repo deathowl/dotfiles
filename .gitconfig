@@ -1,8 +1,8 @@
 [branch]
 	autosetuprebase = always
 [user]
-	name = deathowl
-	email = bcsergo@hortonworks.com
+	email = balint.csergo@emarsys.com
+	name = "Balint Csergo"
 [push]
 	default = upstream
 [core]
