@@ -1,0 +1,4 @@
+XTerm.vt100.locale: true
+xterm*font: DejaVu Sans Mono:pixelsize=18
+xterm*background: black
+xterm*foreground: lightgray

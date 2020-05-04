@@ -1,26 +1,26 @@
 [branch]
-	autosetuprebase = always
+ autosetuprebase = always
 [user]
-	email = balint.csergo@emarsys.com
-	name = "Balint Csergo"
+ email = deathowlzz@gmail.com
+ name = "Balint Csergo"
 [push]
-	default = upstream
+ default = upstream
 [core]
-	autocrlf = false
-	safecrlf = true
+ autocrlf = false
+ safecrlf = true
 [alias]
-	workbranch = "!f() { wb=\"work/$1\"; git fetch; git checkout -b $wb origin/master; git commit -m \"$wb initial\" --allow-empty; git push origin $wb:$wb --set-upstream; }; f"
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	lsd = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-	le = log --oneline --decorate
-	dlc = diff --cached HEAD^
-	done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
-	st = status -s
-	cl = clone
-	ci = commit
-	co = checkout
-	br = branch 
-	diff = diff --word-diff
-	dc = diff --cached
+ workbranch = "!f() { wb=\"work/$1\"; git fetch; git checkout -b $wb origin/master; git commit -m \"$wb initial\" --allow-empty; git push origin $wb:$wb --set-upstream; }; f"
+ ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+ ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+ lsd = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+ ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+ le = log --oneline --decorate
+ dlc = diff --cached HEAD^
+ done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+ st = status -s
+ cl = clone
+ ci = commit
+ co = checkout
+ br = branch 
+ diff = diff --word-diff
+ dc = diff --cached

@@ -1,82 +1,102 @@
-background no
-font Sans:size=8
-#xftfont Sans:size=10
-use_xft yes
-xftalpha 0.9
-update_interval 3.0
+background yes
+font 7x13
+use_xft no
+on_bottom yes
+
+mpd_host 127.0.0.1
+mpd_port 6600
+
+update_interval 1.0
+
 total_run_times 0
+
 own_window yes
-own_window_type desktop
-own_window_hints undecorated,below,skip_taskbar,skip_pager
+own_window_class Conky
+own_window_type override
+
+own_window_transparent yes
+
 double_buffer yes
-minimum_size 220 5
-maximum_width 220
+
+minimum_size 280 5
+
 draw_shades yes
 draw_outline no
 draw_borders no
-draw_graph_borders yes
+stippled_borders 8
+border_margin 4
+border_width 1
+
 default_color white
 default_shade_color black
 default_outline_color black
+
 alignment top_right
-gap_x 12
-gap_y 35
+
+maximum_width 308
+
+gap_x 10
+gap_y 0
+
 no_buffers yes
+
+uppercase no
+
 cpu_avg_samples 2
+net_avg_samples 2
+
 override_utf8_locale no
-uppercase yes # set to yes if you want all text to be in uppercase
-own_window_colour 000000
-own_window_argb_visual yes
-own_window_argb_value 110
+
+use_spacer no
+
+# stuff after 'TEXT' will be formatted on screen
 
 TEXT
-${color white}SYSTEM ${hr 1}${color}
+${color #5b6dad}$nodename   linux-$kernel${alignr}${time %T}
 
-Hostname: $alignr$nodename
-Kernel: $alignr$kernel
-Uptime: $alignr$uptime
-Temp: ${alignr}${acpitemp}C
+${color #5b6dad}System:
+${color #5b6dad} Uptime:${color #7f8ed3} $uptime ${color #5b6dad}- Load:${color #7f8ed3} $loadavg
+${color #5b6dad} CPU Frequency:${color #7f8ed3} $freq_g
+${color #5b6dad} CPU Usage:${color #7f8ed3} $cpu% ${cpubar}
+${color #000000}${cpugraph cpu0 32,309 000000 7f8ed3}
+${color #5b6dad} RAM Usage:${color #7f8ed3} $mem/$memmax - $memperc% ${membar}
+${color #5b6dad} Processes:${color #7f8ed3} $processes  ${color #5b6dad}Running:${color #7f8ed3} $running_processes
 
-CPU: ${alignr}${freq} MHz
-Processes: ${alignr}$processes ($running_processes running)
-Load: ${alignr}$loadavg
+${color #5b6dad}Networking:
+ ${color #5b6dad}Down:${color #7f8ed3} ${downspeed wlp4s0} k/s${color #5b6dad}${offset 80}Up:${color #7f8ed3} ${upspeed wlp4s0} k/s
+${color #000000}${downspeedgraph wlp4s0 32,150 000000 7f8ed3} ${color #000000}${upspeedgraph wlp4s0 32,150 000000 7f8ed3}
+ ${color #5b6dad}Address: ${color #7f8ed3}${addr wlp4s0}${alignr}${color #5b6dad}TCP Connections: ${color #7f8ed3}${tcp_portmon 1 65535 count}
 
-CPU1 ${alignr}${cpu cpu1}%
-${cpubar 4 cpu1}
-CPU2 ${alignr}${cpu cpu2}%
-${cpubar 4 cpu2}
-CPU3 ${alignr}${cpu cpu3}%
-${cpubar 4 cpu3}
-CPU4 ${alignr}${cpu cpu4}%
-${cpubar 4 cpu4}
+${color #5b6dad}File Systems:
+ ${color #5b6dad}/ ${color #7f8ed3}${fs_used /}/${fs_size /} ${color #7f8ed3}${fs_bar /}
 
-Ram ${alignr}$mem / $memmax ($memperc%)
-${membar 4}
-swap ${alignr}$swap / $swapmax ($swapperc%)
-${swapbar 4}
+${color #5b6dad}Monitors          CPU     FAN
+${color #7f8ed3}                  ${execi 30  sensors amdgpu-pci-0500 -u | grep temp1_input| awk '{print $2}'| awk -F\. '{print $1}'}C     ${execi 30 sensors asus-isa-0000 -u | grep fan1_input | awk '{print $2}'|  awk  -F\. '{print $1}'} RPM
 
-Highest CPU $alignr CPU% MEM%
-${top name 1}$alignr${top cpu 1}${top mem 1}
-${top name 2}$alignr${top cpu 2}${top mem 2}
-${top name 3}$alignr${top cpu 3}${top mem 3}
+${color #5b6dad}MPD: ${color #7f8ed3}${alignc}$mpd_artist - $mpd_title
+${color #7f8ed3}$mpd_bar
+${color #7f8ed3}${alignc}$mpd_status
 
-Highest MEM $alignr CPU% MEM%
-${top_mem name 1}$alignr${top_mem cpu 1}${top_mem mem 1}
-${top_mem name 2}$alignr${top_mem cpu 2}${top_mem mem 2}
-${top_mem name 3}$alignr${top_mem cpu 3}${top_mem mem 3}
+${color #5b6dad}TOP PROCs
+${color #5b6dad}Name              PID     CPU%   MEM%
+${color #7f8ed3} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color #7f8ed3} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color #7f8ed3} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color #5b6dad}Mem usage
+${color #7f8ed3} ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+${color #7f8ed3} ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+${color #7f8ed3} ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
 
-${color white}Filesystem ${hr 1}${color}
+${color #5b6dad}Portage:
+ ${color #5b6dad}Last Sync        ${color #7f8ed3}${execi 300 /home/deathowl/.conky/lastsync.pl}
+ ${color #5b6dad}Current Progress ${color #7f8ed3}${execibar 30 /home/deathowl/.conky/emerge-progress.sh}
+ ${color #5b6dad}Current Package  ${color #7f8ed3}${execi 30 /home/deathowl/.conky/emerge-current.sh}
+ ${color #5b6dad}Current Status   ${color #7f8ed3}${execi 30 /home/deathowl/.conky/emerge-status.sh}
 
-Root: ${alignr}${fs_free /} / ${fs_size /}
-${fs_bar 4 /}
-Home: ${alignr}${fs_free /home} / ${fs_size /home}
-${fs_bar 4 /home}
-WWW: ${alignr}${fs_free /www} / ${fs_size /www}
-${fs_bar 4 /www}
 
-${color white}NETWORK ${hr 1}${color}
+${alignc}Stocks Today${font}${voffset 10}
+${color #5b6dad}FB: ${color #7f8ed3}${execi 300 curl -s https://query1.finance.yahoo.com/v7/finance/quote\?lang\=en-US\&region\=US\&corsDomain\=finance.yahoo.com\&symbols\=FB\&fields\=regularMarketPrice | jq ".quoteResponse.result[0].regularMarketPrice"}
 
-Down ${downspeed eth0} k/s ${alignr}Up ${upspeed eth0} k/s
-${downspeedgraph eth0 25,107} ${alignr}${upspeedgraph eth0 25,107}
-Total ${totaldown eth0} ${alignr}Total ${totalup eth0}
+${alignc}Crypto prices${font}${voffset 10}
+${color #5b6dad}ETH/EUR: ${color #7f8ed3}${execi 300 curl -s curl -s https://min-api.cryptocompare.com/data/price\?fsym\=ETH\&tsyms\=EUR\ |jq .EUR}
 
